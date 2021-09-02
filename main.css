@@ -1,0 +1,43 @@
+* {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    font-family: Arial;
+}
+#div-main {
+    border: 2px solid;
+    margin: 200px 20%;
+    min-width: 200px;
+}
+#div-round {
+    margin: 10px 10%;
+    text-align: center;
+}
+#div-score {
+    margin: 20px 10%;
+    text-align: center;
+    font-size: 50px;
+}
+#div-text {
+    margin: 20px 10%;
+    text-align: center;
+}
+#div-button {
+    margin: 10px 10%;
+    height: auto;
+    text-align: center;
+}
+#div-max {
+    margin: 20px 10%;
+    text-align: center;
+}
+button {
+    width: 90px;
+    height: 25px;
+    border: 1px solid;
+    margin: 10px 8px;
+}
+#input-max {
+    width: 32px;
+    border: 1px solid;
+}
