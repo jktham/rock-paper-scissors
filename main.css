@@ -38,6 +38,9 @@ button {
     height: 25px;
     border: 1px solid;
 }
+button:hover {
+    background-color: rgb(230, 230, 230);
+}
 #input-max {
     width: 32px;
     border: 1px solid;
