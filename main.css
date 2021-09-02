@@ -6,8 +6,10 @@
 }
 #div-main {
     border: 2px solid;
-    margin: 200px 20%;
-    min-width: 200px;
+    margin: 200px auto;
+    width: 80%;
+    min-width: 220px;
+    max-width: 500px;
 }
 #div-round {
     margin: 10px 10%;
@@ -24,7 +26,6 @@
 }
 #div-button {
     margin: 10px 10%;
-    height: auto;
     text-align: center;
 }
 #div-max {
@@ -32,10 +33,10 @@
     text-align: center;
 }
 button {
+    margin: 10px 8px;
     width: 90px;
     height: 25px;
     border: 1px solid;
-    margin: 10px 8px;
 }
 #input-max {
     width: 32px;

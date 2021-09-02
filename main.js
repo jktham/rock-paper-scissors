@@ -1,7 +1,8 @@
 let playerScore = 0;
 let computerScore = 0;
-let maxscore = 0;
+let maxScore = 0;
 let round = 0;
+
 let buttons = Array.from(document.querySelectorAll("button"));
 let input = document.querySelector("input");
 let roundDiv = document.querySelector("#div-round");
@@ -10,12 +11,9 @@ let textDiv = document.querySelector("#div-text");
 
 buttons.forEach(function (button) {
     button.addEventListener("click", userChoice);
-    if (button.id == "button-start") {
-        button.style.display = "inline-block";
-    } else {
-        button.style.display = "none";
-    }
-})
+    button.style.display = "none";
+    buttons[0].style.display = "inline-block";
+});
 
 function toggleButtons() {
     buttons.forEach(function (button) {
@@ -26,7 +24,7 @@ function toggleButtons() {
             button.style.display = "none";
             input.disabled = false;
         }
-    })
+    });
 }
 
 function computerChoice() {
@@ -63,21 +61,21 @@ function playRound(playerSelection, computerSelection) {
         output(`You lose! ${toWord(playerSelection)} is beaten by ${toWord(computerSelection)}.`);
     }
     if (playerScore == maxScore) {
-        toggleButtons();
         scoreDiv.style.color = "#00a300";
-    } else if (computerScore == maxScore) {
         toggleButtons();
+    } else if (computerScore == maxScore) {
         scoreDiv.style.color = "#FF0000";
+        toggleButtons();
     }
 }
 
 function startGame(n) {
-    toggleButtons();
     playerScore = 0;
     computerScore = 0;
     round = 1;
     maxScore = input.value;
     scoreDiv.style.color = "#000000";
+    toggleButtons();
     output("Rock, Paper, Scissors!");
 }
 
@@ -87,8 +85,8 @@ function output(str) {
     textDiv.textContent = str;
 }
 
-function toWord(number) {
-    switch(number) {
+function toWord(num) {
+    switch(num) {
         case 0:
             return "Rock";
         case 1:
