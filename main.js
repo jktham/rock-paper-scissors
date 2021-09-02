@@ -69,7 +69,7 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
-function startGame(n) {
+function startGame() {
     playerScore = 0;
     computerScore = 0;
     round = 1;
