@@ -3,16 +3,17 @@ let computerScore = 0;
 let maxScore = 0;
 let round = 0;
 
-let buttons = Array.from(document.querySelectorAll("button"));
-let input = document.querySelector("input");
-let roundDiv = document.querySelector("#div-round");
-let scoreDiv = document.querySelector("#div-score");
-let textDiv = document.querySelector("#div-text");
+const buttons = Array.from(document.querySelectorAll("button"));
+const buttonStart = document.querySelector("#button-start");
+const input = document.querySelector("input");
+const roundDiv = document.querySelector("#div-round");
+const scoreDiv = document.querySelector("#div-score");
+const textDiv = document.querySelector("#div-text");
 
 buttons.forEach(function (button) {
     button.addEventListener("click", userChoice);
     button.style.display = "none";
-    buttons[0].style.display = "inline-block";
+    buttonStart.style.display = "inline-block";
 });
 
 function toggleButtons() {
@@ -28,7 +29,7 @@ function toggleButtons() {
 }
 
 function computerChoice() {
-    let choice = Math.floor(Math.random()*3);
+    const choice = Math.floor(Math.random()*3);
     return choice;
 }
 
